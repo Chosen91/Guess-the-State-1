@@ -5,7 +5,7 @@ const log = (arg) => console.log(arg)
 
 var states = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','DistrictofColumbia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','NewHampshire','NewJersey','NewMexico','NewYork','NorthCarolina','NorthDakota','Ohio','Oklahoma','Oregon','Pennsylvania','PuertoRico','RhodeIsland','SouthCarolina','SouthDakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','WestVirginia','Wisconsin','Wyoming']
 
-// Since my code is relying only none numeric or special chracters. I removed the space from certain two state states. 
+// Since my code is relying only none numeric or special chracters. I removed the space from certain two word states. 
 
 
 var game = {
@@ -107,7 +107,7 @@ function newGame() {
                         document.getElementById("message").innerHTML = "Letter already tried";
                     }
                 }
-                else //no more tries, you loose
+                else //no more tries, game is OVER
                 {
                     while (game.gamePlay) {
                         gameOver();
@@ -209,8 +209,8 @@ function newGamePrep() {
     for (i = 0; i < game.state.length; i++) {
         game.stateLetters.push(game.state.charAt(i).toLowerCase())
     }
-    //Since the majority of states have different number of chracters. Create a ** HINT ** that wioll help them identify 
-    // the number of letters . Best way t6o accomplish this is by using spaces. 
+    //Since the majority of states have different number of chracters. Create a ** HINT ** that will help them identify 
+    // the number of letters . Best way to accomplish this is by using spaces. 
     for (i = 0; i < game.stateLetters.length; i++) {
         game.placeHolder.push("_")
     }
