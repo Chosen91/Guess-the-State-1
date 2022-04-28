@@ -33,7 +33,9 @@ function newGame() {
          https://css-tricks.com/snippets/javascript/javascript-keycodes/*/
 
         if (event.which >= 65 && event.which <= 90) {
+            document.getElementById("coolkid").classList.add("rollIn")
             var keyPressed = (event.key).toLocaleLowerCase()
+
         } else {
             //Instead of using an Alert, I am using a Modal to alert the user that the input they just entered was not a letter
             //alert("Only letters A-Z are allowed")
@@ -189,6 +191,7 @@ Create a funtion that would start the game. What should the function include?
 (3) All following arrays should be emptied stateLetters, correctGuess, placeHolder, and wrongGusses. 
 */
 function newGamePrep() {
+    
     document.getElementById("status").style.backgroundColor = "#e9ecef";
     document.getElementById("progress").classList.remove("bg-danger")
     document.getElementById("progress").classList.remove("bg-warning")

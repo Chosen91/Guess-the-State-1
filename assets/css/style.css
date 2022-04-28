@@ -7,10 +7,23 @@ body{
     background-color: #74c4f1;
 }
 
+/*em is not an absolute unit - it is a unit that is relative to the currently chosen font size. Unless you have overridden font style by setting your font size with an absolute unit (such as px or pt), this will be affected by the choice of fonts in the user's browser or OS if they have made one, so it does not make sense to use em as a general unit of length except where you specifically want it to scale as the font size scales.
+
+Use em when you specifically want the size of something to depend on the current font size. */
 .title
 {
     color: #FFF;
     font-size: 3.9em;
+    font-family: 'Bowlby One SC', cursive;
+    margin-left: -50px;
+    margin-top: 20px;
+    
+}
+
+.subtitle
+{
+    color: #FFF;
+    font-size: 1.0em;
     font-family: 'Bowlby One SC', cursive;
     margin-left: -50px;
     margin-top: 20px;
