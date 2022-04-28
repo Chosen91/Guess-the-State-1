@@ -8,6 +8,7 @@ var states = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','C
 // Since my code is relying only none numeric or special chracters. I removed the space from certain two word states. 
 
 
+
 var game = {
     state: "",
     stateLetters: [],

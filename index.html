@@ -15,6 +15,7 @@
 
 </head>
 <body>
+    
     <div class="container">
 
         <div class="row">
@@ -45,7 +46,6 @@
             </div>
         </div>
 
-
         <!-- A jumbotron indicates a big box for calling extra attention to some special content or information. -->
         <div class="jumbotron" id="status">
             <h1 class="display-4"> <span id="state"></span>
@@ -56,6 +56,8 @@
             <p class="lead">
                 <a class="btn btn-primary btn-lg" onclick="newGame()" role="button">New Game</a>
             </p>
+            
+
         </div>
 
         <!-- A progress bar can be used to show a user how far along he/she is in a process.
@@ -99,7 +101,12 @@
             </div>
         </div>
     </div>
-    
+    <!-- Created this div below to push my runner so that it is displaying in the footer.  -->
+    <div style="width:100%; height: 200px; background-color: #74c4f1;">
+      </div>
+      <!-- Created this runner to dsiplay all states.  -->
+    <marquee style="font-size: 24px;" behavior="scroll" direction="left" scrollamount="5">Alabama Indiana Nebraska Rhode Island Alaska Iowa Nevada South Carolina Arizona Kansas New Hampshire Tennessee California Lousiana New Mexico Texas Colorado Maine New York Utah Connecticut Maryland North Carolina Vermont Delaware Massachusetts North Dakota Virginia Florida Michigan Ohio Washington Georgia Minnesota Oklahoma West Virginia Hawaii Missippi Oregon Wisconsin idaho Missouri Pennsylvania Wyoming Illinois Montana</marquee>
+ 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
