@@ -1,3 +1,26 @@
+/*This is the animation used to change the title to multiple colors. It is a infinite loop 
+A key frame (or keyframe) in animation and filmmaking is a drawing or shot that defines the starting and ending points of any smooth transition.
+
+
+** unintentional consequence of using multiple H1 tags... Initially only wanted the main Title H1 to change colors but when I got the answer right or 
+wrong, then answer started to change as well. It looked good so I left it as is. 
+
+
+https://stackoverflow.com/questions/16782498/looping-animation-of-text-color-change-using-css3*/ 
+ h1{
+    animation: color-change 1s infinite;
+  }
+  
+  @keyframes color-change {
+    0% { color: red; }
+    25% { color: lightgreen;}
+    50% { color: blue; }
+    75% { color: pink;}
+    100% { color: yellow; }
+  }
+  
+
+
 .jumbotron{
     margin-top: 10px;
 }
@@ -71,4 +94,12 @@ Use em when you specifically want the size of something to depend on the current
 {
     font-size: 8.0em;
     text-align: center;
+}
+
+.scroll
+{
+    color: #FFF;
+    font-size: 3.9em;
+    font-family: 'Bowlby One SC', cursive;
+ 
 }

@@ -1,6 +1,6 @@
 const log = (arg) => console.log(arg)
 
-// Step 1: Sice the premise of the came is to be able to guess the name of a state. Create a list of states and put into an array. 
+// Step 1: Since the premise of the came is to be able to guess the name of a state. Create a list of states and put into an array. 
 // I tried to find a API to use, but was having diffuclities locating one. 
 
 var states = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','DistrictofColumbia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','NewHampshire','NewJersey','NewMexico','NewYork','NorthCarolina','NorthDakota','Ohio','Oklahoma','Oregon','Pennsylvania','PuertoRico','RhodeIsland','SouthCarolina','SouthDakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','WestVirginia','Wisconsin','Wyoming']
