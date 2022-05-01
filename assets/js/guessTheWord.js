@@ -21,6 +21,48 @@ var game = {
     gamePlay: true
 }
 
+/* Step 2
+Create a funtion that would start the game. What should the function include?
+(1) The game should start off with a white background. 
+(2) The status bar should be green. So remove any and all previous colors and add bg-success.
+(3) All following arrays should be emptied stateLetters, correctGuess, placeHolder, and wrongGusses. 
+*/
+function newGamePrep() {
+
+// Game needed to start with the bg-success... Since the game may end with bg danger or warning. Remove both and add bg success
+    
+    document.getElementById("status").style.backgroundColor = "#e9ecef";
+    document.getElementById("progress").classList.remove("bg-danger")
+    document.getElementById("progress").classList.remove("bg-warning")
+    document.getElementById("progress").classList.add("bg-success")
+    document.getElementById("progress").setAttribute("style", "width: 100%;");
+    game.state = states[Math.floor(Math.random() * states.length)]
+    game.stateLetters = [];
+    game.correctGuess = [];
+    game.placeHolder = [];
+    game.wrongGuess = [];
+    
+    document.getElementById("message").innerHTML = ""
+    document.getElementById("wrong").innerHTML = ""
+    game.gamePlay = true;
+
+
+    //splits the state into letters into the stateLetters array
+    for (i = 0; i < game.state.length; i++) {
+        game.stateLetters.push(game.state.charAt(i).toLowerCase())
+    }
+    //Since the majority of states have different number of chracters. Create a ** HINT ** that will help them identify 
+    // the number of letters . Best way to accomplish this is by using spaces. 
+    for (i = 0; i < game.stateLetters.length; i++) {
+        game.placeHolder.push("_")
+    }
+    var place = ""
+    for (i = 0; i < game.placeHolder.length; i++) {
+        place += "_ "
+    }
+    log(game.stateLetters)
+    document.getElementById("state").innerHTML = place;
+}
 
 
 // 
@@ -135,6 +177,8 @@ function newGame() {
     }
     
 }
+
+// Function if player loses game
 function gameOver() {
     var displayLetters = ""
     log("game over")
@@ -185,46 +229,7 @@ function winsGame() {
     game.gamePlay = false;
 
 }
-/* 
-Create a funtion that would start the game. What should the function include?
-(1) The game should start off with a white background. 
-(2) The status bar should be green. So remove any and all previous colors and add bg-success.
-(3) All following arrays should be emptied stateLetters, correctGuess, placeHolder, and wrongGusses. 
-*/
-function newGamePrep() {
-    
-    document.getElementById("status").style.backgroundColor = "#e9ecef";
-    document.getElementById("progress").classList.remove("bg-danger")
-    document.getElementById("progress").classList.remove("bg-warning")
-    document.getElementById("progress").classList.add("bg-success")
-    document.getElementById("progress").setAttribute("style", "width: 100%;");
-    game.state = states[Math.floor(Math.random() * states.length)]
-    game.stateLetters = [];
-    game.correctGuess = [];
-    game.placeHolder = [];
-    game.wrongGuess = [];
-    
-    document.getElementById("message").innerHTML = ""
-    document.getElementById("wrong").innerHTML = ""
-    game.gamePlay = true;
 
-
-    //splits the state into letters into the stateLetters array
-    for (i = 0; i < game.state.length; i++) {
-        game.stateLetters.push(game.state.charAt(i).toLowerCase())
-    }
-    //Since the majority of states have different number of chracters. Create a ** HINT ** that will help them identify 
-    // the number of letters . Best way to accomplish this is by using spaces. 
-    for (i = 0; i < game.stateLetters.length; i++) {
-        game.placeHolder.push("_")
-    }
-    var place = ""
-    for (i = 0; i < game.placeHolder.length; i++) {
-        place += "_ "
-    }
-    log(game.stateLetters)
-    document.getElementById("state").innerHTML = place;
-}
 
 
 
