@@ -5,7 +5,7 @@ const log = (arg) => console.log(arg)
 
 var states = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','DistrictofColumbia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','NewHampshire','NewJersey','NewMexico','NewYork','NorthCarolina','NorthDakota','Ohio','Oklahoma','Oregon','Pennsylvania','PuertoRico','RhodeIsland','SouthCarolina','SouthDakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','WestVirginia','Wisconsin','Wyoming']
 
-// Since my code is relying only none numeric or special chracters. I removed the space from certain two word states. 
+// Since the code is relying only none numeric or special chracters. I removed the space from certain two word states. 
 
 
 
@@ -51,8 +51,8 @@ function newGamePrep() {
     for (i = 0; i < game.state.length; i++) {
         game.stateLetters.push(game.state.charAt(i).toLowerCase())
     }
-    //Since the majority of states have different number of chracters. Create a ** HINT ** that will help them identify 
-    // the number of letters . Best way to accomplish this is by using spaces. 
+   // The code below takes the individuals letters in the state and mask them with _. 
+   // it also provides a slight hint due to the number of spaces. California and Iowa are different in letter count.
     for (i = 0; i < game.stateLetters.length; i++) {
         game.placeHolder.push("_")
     }
