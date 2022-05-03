@@ -17,10 +17,10 @@ Sound
 
 The game will have the following features:
 
-An animated progress (health bar) bar that will change colors
-Alerts to warn users of failed attempts once they pass the 50% health meter. 
-It will include an animated image of my Bit emoji when they when win or lose the game. 
-It will contain self storage to keep track of the wins and losses. 
+1. An animated progress (health bar) bar that will change colors
+2. Alerts to warn users of failed attempts once they pass the 50% health meter. 
+3. It will include an animated image of individual team members Bit emoji when they when win or lose the game.
+4.  It will contain self storage to keep track of the wins and losses. 
 
 Game Preview
 
